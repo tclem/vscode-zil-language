@@ -1,0 +1,51 @@
+// A launch configuration that launches the extension inside a new window
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Extension",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ],
+            "smartStep": true,
+            // "diagnosticLogging": true,
+            "args": ["--extensionDevelopmentPath=${workspaceRoot}" ]
+        },
+        {
+            "name": "Launch Tests",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--extensionTestsPath=${workspaceFolder}/out/spec"
+            ],
+            "stopOnEntry": false,
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceFolder}/out/spec/**/*.js"
+            ],
+            "preLaunchTask": "npm: compile"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Server",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/src/debugger/zilDebug.ts",
+            "args": [ "--server=4711" ],
+            "outFiles": [ "${workspaceFolder}/out/**/*.js" ],
+            "smartStep": true
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Extension + Server",
+            "configurations": [ "Extension", "Server" ]
+        }
+    ]
+}

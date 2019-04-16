@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"ms-devlabs.extension-manifest-editor",
+			"ms-vscode.vscode-typescript-tslint-plugin",
+			"seansobey.jasmine-problem-matcher",
+			"shardulm94.trailing-spaces"
+		]
+	},
+	"settings": {
+
+	}
+}

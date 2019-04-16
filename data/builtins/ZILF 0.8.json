@@ -1,0 +1,9278 @@
+{
+  "COND": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "clauses"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "clauses"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "type": "LIST",
+            "elements": [
+              {
+                "name": "condition"
+              },
+              {
+                "$rest": {
+                  "name": "body"
+                }
+              }
+            ],
+            "name": "clauses"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "VERSION?": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "clauses"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "clauses"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "type": "LIST",
+            "elements": [
+              {
+                "name": "condition"
+              },
+              {
+                "$rest": {
+                  "name": "body"
+                }
+              }
+            ],
+            "name": "clauses"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "IFFLAG": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "clauses"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "clauses"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "type": "LIST",
+            "elements": [
+              {
+                "name": "condition"
+              },
+              {
+                "$rest": {
+                  "name": "body"
+                }
+              }
+            ],
+            "name": "args"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "CHTYPE": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "type",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "TELL": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "EQUAL?": [
+    {
+      "args": [
+        {
+          "name": "arg1"
+        },
+        {
+          "name": "arg2"
+        },
+        {
+          "$rest": {
+            "name": "restOfArgs"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "=?": [
+    {
+      "args": [
+        {
+          "name": "arg1"
+        },
+        {
+          "name": "arg2"
+        },
+        {
+          "$rest": {
+            "name": "restOfArgs"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "==?": [
+    {
+      "args": [
+        {
+          "name": "arg1"
+        },
+        {
+          "name": "arg2"
+        },
+        {
+          "$rest": {
+            "name": "restOfArgs"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "N=?": [
+    {
+      "args": [
+        {
+          "name": "arg1"
+        },
+        {
+          "name": "arg2"
+        },
+        {
+          "$rest": {
+            "name": "restOfArgs"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "N==?": [
+    {
+      "args": [
+        {
+          "name": "arg1"
+        },
+        {
+          "name": "arg2"
+        },
+        {
+          "$rest": {
+            "name": "restOfArgs"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "DCLEAR": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "DIROUT": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "DISPLAY": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "WINPOS": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "WINPUT": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "WINSIZE": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "MARGIN": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "$opt": {
+            "name": "right"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "WINATTR": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "$opt": {
+            "name": "right"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "PUT": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        },
+        {
+          "name": "idx",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "new-value"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "ZPUT": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "tableish"
+        },
+        {
+          "name": "index",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "new-value"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "PUTB": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "tableish"
+        },
+        {
+          "name": "index",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "new-value"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "PUTP": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "COPYT": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "center",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "MOD": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "b",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ASH": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ASHIFT": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "LSH": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "b",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "SHIFT": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "WINGET": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "XORB": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ADD": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "+": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "SUB": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "-": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "MUL": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "*": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "DIV": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "/": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "BAND": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "ANDB": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "BOR": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "ORB": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "REST": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "$opt": {
+            "name": "right"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        },
+        {
+          "$opt": {
+            "name": "skip",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ZREST": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "$opt": {
+            "name": "right"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "tableish"
+        },
+        {
+          "name": "bytes",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "BACK": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "$opt": {
+            "name": "right"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        },
+        {
+          "$opt": {
+            "name": "skip",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ZBACK": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "$opt": {
+            "name": "right"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "CURSET": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 5
+    },
+    {
+      "args": [
+        {
+          "name": "line"
+        },
+        {
+          "$opt": {
+            "name": "column"
+          }
+        },
+        {
+          "$opt": {
+            "name": "window"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "COLOR": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "THROW": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "SCROLL": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "GRTR?": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "G?": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "b",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "LESS?": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "L?": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "b",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "BTST": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "MENU": [
+    {
+      "args": [
+        {
+          "name": "menuId"
+        },
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "L=?": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "b",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "G=?": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "a",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "b",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "DLESS?": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "IGRTR?": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "PICINF": [
+    {
+      "args": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "right",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "GETP": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "NEXTP": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "FSET": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "FCLEAR": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "FSET?": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "IN?": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "MOVE": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "GETPT": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    }
+  ],
+  "GET": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "NTH": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        },
+        {
+          "name": "idx",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ZGET": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "tableish"
+        },
+        {
+          "name": "index",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "GETB": [
+    {
+      "args": [
+        {
+          "name": "left",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "right"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "tableish"
+        },
+        {
+          "name": "index",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "BCOM": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "RANDOM": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "ZRANDOM": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "FONT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "CHECKU": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "DIRIN": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "BUFOUT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    }
+  ],
+  "ZBUFOUT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    }
+  ],
+  "HLIGHT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "CLEAR": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    }
+  ],
+  "SCREEN": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "SPLIT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "ERASE": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    }
+  ],
+  "MOUSE-LIMIT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "ZERO?": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "0?": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "1?": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "LOC": [
+    {
+      "args": [
+        {
+          "name": "obj",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "FIRST?": [
+    {
+      "args": [
+        {
+          "name": "obj",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "$and": [
+            null
+          ]
+        }
+      }
+    }
+  ],
+  "NEXT?": [
+    {
+      "args": [
+        {
+          "name": "obj",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "$and": [
+            null
+          ]
+        }
+      }
+    }
+  ],
+  "PTSIZE": [
+    {
+      "args": [
+        {
+          "name": "value",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "REMOVE": [
+    {
+      "args": [
+        {
+          "name": "value",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "atom",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "$seq": [
+                {
+                  "name": "pname",
+                  "constraint": {
+                    "constraint": "type",
+                    "type": "STRING"
+                  }
+                },
+                {
+                  "name": "ob-list",
+                  "constraint": {
+                    "constraint": "type",
+                    "type": "OBLIST"
+                  }
+                }
+              ],
+              "name": "atom"
+            }
+          ],
+          "name": "atom"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ZREMOVE": [
+    {
+      "args": [
+        {
+          "name": "value",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBJECT"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "ASSIGNED?": [
+    {
+      "args": [
+        {
+          "name": "var",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "var",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "env",
+            "constraint": {
+              "constraint": "type",
+              "type": "ENVIRONMENT"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "CURGET": [
+    {
+      "args": [
+        {
+          "name": "value",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    }
+  ],
+  "PICSET": [
+    {
+      "args": [
+        {
+          "name": "value",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "MOUSE-INFO": [
+    {
+      "args": [
+        {
+          "name": "value",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTF": [
+    {
+      "args": [
+        {
+          "name": "value",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "PRINT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "$opt": {
+            "name": "channel",
+            "constraint": {
+              "constraint": "type",
+              "type": "CHANNEL"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ZPRINT": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTB": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "ZPRINTB": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTC": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTD": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTN": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTU": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTT": [
+    {
+      "args": [
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "width"
+        },
+        {
+          "$opt": {
+            "name": "height"
+          }
+        },
+        {
+          "$opt": {
+            "name": "skip"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTI": [
+    {
+      "args": [
+        {
+          "name": "text",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PRINTR": [
+    {
+      "args": [
+        {
+          "name": "text",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "CRLF": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "channel",
+            "constraint": {
+              "constraint": "type",
+              "type": "CHANNEL"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ZCRLF": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "SET": [
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "name": "value"
+        },
+        {
+          "$opt": {
+            "name": "env",
+            "constraint": {
+              "constraint": "type",
+              "type": "ENVIRONMENT"
+            }
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "SETG": [
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              }
+            ]
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "INC": [
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "DEC": [
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "victim",
+          "constraint": {
+            "$or": [
+              {
+                "constraint": "type",
+                "type": "ATOM"
+              },
+              {
+                "constraint": "type",
+                "type": "GVAL"
+              },
+              {
+                "constraint": "type",
+                "type": "LVAL"
+              }
+            ]
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "PUSH": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "XPUSH": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "stack"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "POP": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "stack"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "FSTACK": [
+    {
+      "args": [
+        {
+          "name": "count"
+        },
+        {
+          "$opt": {
+            "name": "stack"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 6,
+      "maxVersion": 6
+    }
+  ],
+  "VALUE": [
+    {
+      "args": [
+        {
+          "name": "var",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "env",
+            "constraint": {
+              "constraint": "type",
+              "type": "ENVIRONMENT"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "GVAL": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "LVAL": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "env",
+            "constraint": {
+              "constraint": "type",
+              "type": "ENVIRONMENT"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "CATCH": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ISAVE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "IRESTORE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ORIGINAL?": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "VERIFY": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "USL": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 3,
+      "maxVersion": 3
+    }
+  ],
+  "RTRUE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "RFALSE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "RFATAL": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "RSTACK": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "RESTART": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "QUIT": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "exit-code"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "READ": [
+    {
+      "args": [
+        {
+          "name": "text"
+        },
+        {
+          "name": "parse"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 3
+    },
+    {
+      "args": [
+        {
+          "name": "text"
+        },
+        {
+          "name": "parse"
+        },
+        {
+          "$opt": {
+            "name": "time"
+          }
+        },
+        {
+          "$opt": {
+            "name": "routine"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 4
+    },
+    {
+      "args": [
+        {
+          "name": "text"
+        },
+        {
+          "$opt": {
+            "name": "parse"
+          }
+        },
+        {
+          "$opt": {
+            "name": "time"
+          }
+        },
+        {
+          "$opt": {
+            "name": "routine"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ZREAD": [
+    {
+      "args": [
+        {
+          "name": "text"
+        },
+        {
+          "name": "parse"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 3
+    },
+    {
+      "args": [
+        {
+          "name": "text"
+        },
+        {
+          "name": "parse"
+        },
+        {
+          "$opt": {
+            "name": "time"
+          }
+        },
+        {
+          "$opt": {
+            "name": "routine"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 4
+    },
+    {
+      "args": [
+        {
+          "name": "text"
+        },
+        {
+          "$opt": {
+            "name": "parse"
+          }
+        },
+        {
+          "$opt": {
+            "name": "time"
+          }
+        },
+        {
+          "$opt": {
+            "name": "routine"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "INPUT": [
+    {
+      "args": [
+        {
+          "name": "dummy"
+        },
+        {
+          "$opt": {
+            "name": "interval"
+          }
+        },
+        {
+          "$opt": {
+            "name": "routine"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    }
+  ],
+  "SOUND": [
+    {
+      "args": [
+        {
+          "name": "number"
+        },
+        {
+          "$opt": {
+            "name": "effect"
+          }
+        },
+        {
+          "$opt": {
+            "name": "volume"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 4
+    },
+    {
+      "args": [
+        {
+          "name": "number"
+        },
+        {
+          "$opt": {
+            "name": "effect"
+          }
+        },
+        {
+          "$opt": {
+            "name": "volume"
+          }
+        },
+        {
+          "$opt": {
+            "name": "routine"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ZWSTR": [
+    {
+      "args": [
+        {
+          "name": "src",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "length"
+        },
+        {
+          "name": "srcOffset"
+        },
+        {
+          "name": "dest",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 4,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "LEX": [
+    {
+      "args": [
+        {
+          "name": "text",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "parse",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "$opt": {
+            "name": "dictionary",
+            "constraint": {
+              "constraint": "primtype",
+              "primype": "TABLE"
+            }
+          }
+        },
+        {
+          "$opt": {
+            "name": "flag"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "RESTORE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 3,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "bytes"
+        },
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ZRESTORE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 3,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "bytes"
+        },
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "SAVE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 3,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "bytes"
+        },
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ZSAVE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 3,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "bytes"
+        },
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "RETURN": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "expr"
+          }
+        },
+        {
+          "$opt": {
+            "name": "block",
+            "constraint": {
+              "constraint": "type",
+              "type": "ACTIVATION"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "value"
+          }
+        },
+        {
+          "$opt": {
+            "name": "activation",
+            "constraint": {
+              "constraint": "type",
+              "type": "ACTIVATION"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "AGAIN": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "block",
+            "constraint": {
+              "constraint": "type",
+              "type": "ACTIVATION"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "activation",
+            "constraint": {
+              "constraint": "type",
+              "type": "ACTIVATION"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "APPLY": [
+    {
+      "args": [
+        {
+          "name": "routine"
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "routine"
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "ap",
+          "constraint": {
+            "constraint": "applicable"
+          }
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "CALL": [
+    {
+      "args": [
+        {
+          "name": "routine"
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "routine"
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6
+    }
+  ],
+  "ZAPPLY": [
+    {
+      "args": [
+        {
+          "name": "routine"
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "INTBL?": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "length"
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 4,
+      "maxVersion": 4,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "table",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "TABLE"
+          }
+        },
+        {
+          "name": "length"
+        },
+        {
+          "$opt": {
+            "name": "form"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 4,
+      "context": "zcode",
+      "minVersion": 5,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    }
+  ],
+  "LOWCORE": [
+    {
+      "args": [
+        {
+          "name": "fieldSpec"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "fieldSpec"
+        },
+        {
+          "name": "newValue"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "LOWCORE-TABLE": [
+    {
+      "args": [
+        {
+          "name": "fieldSpec"
+        },
+        {
+          "name": "length",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "handler",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "ITABLE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "specifier",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "name": "count",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "$opt": {
+            "name": "flag-list",
+            "constraint": {
+              "constraint": "type",
+              "type": "LIST"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "initializer"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "TABLE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "flag-list",
+            "constraint": {
+              "constraint": "type",
+              "type": "LIST"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "values"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "PTABLE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "flag-list",
+            "constraint": {
+              "constraint": "type",
+              "type": "LIST"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "values"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "LTABLE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "flag-list",
+            "constraint": {
+              "constraint": "type",
+              "type": "LIST"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "values"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "PLTABLE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": {
+          "constraint": "primtype",
+          "primype": "TABLE"
+        }
+      }
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "flag-list",
+            "constraint": {
+              "constraint": "type",
+              "type": "LIST"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "values"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "PROG": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "type": "LIST",
+          "elements": [
+            {
+              "$rest": {
+                "$or": [
+                  {
+                    "name": "content",
+                    "constraint": {
+                      "constraint": "type",
+                      "type": "ATOM"
+                    }
+                  },
+                  {
+                    "type": "ADECL",
+                    "elements": [
+                      {
+                        "name": "atom",
+                        "constraint": {
+                          "constraint": "type",
+                          "type": "ATOM"
+                        }
+                      },
+                      {
+                        "name": "decl"
+                      }
+                    ],
+                    "name": "content"
+                  },
+                  {
+                    "type": "LIST",
+                    "elements": [
+                      {
+                        "$or": [
+                          {
+                            "name": "content",
+                            "constraint": {
+                              "constraint": "type",
+                              "type": "ATOM"
+                            }
+                          },
+                          {
+                            "type": "ADECL",
+                            "elements": [
+                              {
+                                "name": "atom",
+                                "constraint": {
+                                  "constraint": "type",
+                                  "type": "ATOM"
+                                }
+                              },
+                              {
+                                "name": "decl"
+                              }
+                            ],
+                            "name": "content"
+                          }
+                        ],
+                        "name": "name"
+                      },
+                      {
+                        "name": "initializer"
+                      }
+                    ],
+                    "name": "content"
+                  }
+                ],
+                "name": "bindings"
+              }
+            }
+          ],
+          "name": "bindings"
+        },
+        {
+          "$opt": {
+            "name": "body-decl",
+            "constraint": {
+              "constraint": "type",
+              "type": "DECL"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "REPEAT": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "type": "LIST",
+          "elements": [
+            {
+              "$rest": {
+                "$or": [
+                  {
+                    "name": "content",
+                    "constraint": {
+                      "constraint": "type",
+                      "type": "ATOM"
+                    }
+                  },
+                  {
+                    "type": "ADECL",
+                    "elements": [
+                      {
+                        "name": "atom",
+                        "constraint": {
+                          "constraint": "type",
+                          "type": "ATOM"
+                        }
+                      },
+                      {
+                        "name": "decl"
+                      }
+                    ],
+                    "name": "content"
+                  },
+                  {
+                    "type": "LIST",
+                    "elements": [
+                      {
+                        "$or": [
+                          {
+                            "name": "content",
+                            "constraint": {
+                              "constraint": "type",
+                              "type": "ATOM"
+                            }
+                          },
+                          {
+                            "type": "ADECL",
+                            "elements": [
+                              {
+                                "name": "atom",
+                                "constraint": {
+                                  "constraint": "type",
+                                  "type": "ATOM"
+                                }
+                              },
+                              {
+                                "name": "decl"
+                              }
+                            ],
+                            "name": "content"
+                          }
+                        ],
+                        "name": "name"
+                      },
+                      {
+                        "name": "initializer"
+                      }
+                    ],
+                    "name": "content"
+                  }
+                ],
+                "name": "bindings"
+              }
+            }
+          ],
+          "name": "bindings"
+        },
+        {
+          "$opt": {
+            "name": "body-decl",
+            "constraint": {
+              "constraint": "type",
+              "type": "DECL"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "BIND": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "type": "LIST",
+          "elements": [
+            {
+              "$rest": {
+                "$or": [
+                  {
+                    "name": "content",
+                    "constraint": {
+                      "constraint": "type",
+                      "type": "ATOM"
+                    }
+                  },
+                  {
+                    "type": "ADECL",
+                    "elements": [
+                      {
+                        "name": "atom",
+                        "constraint": {
+                          "constraint": "type",
+                          "type": "ATOM"
+                        }
+                      },
+                      {
+                        "name": "decl"
+                      }
+                    ],
+                    "name": "content"
+                  },
+                  {
+                    "type": "LIST",
+                    "elements": [
+                      {
+                        "$or": [
+                          {
+                            "name": "content",
+                            "constraint": {
+                              "constraint": "type",
+                              "type": "ATOM"
+                            }
+                          },
+                          {
+                            "type": "ADECL",
+                            "elements": [
+                              {
+                                "name": "atom",
+                                "constraint": {
+                                  "constraint": "type",
+                                  "type": "ATOM"
+                                }
+                              },
+                              {
+                                "name": "decl"
+                              }
+                            ],
+                            "name": "content"
+                          }
+                        ],
+                        "name": "name"
+                      },
+                      {
+                        "name": "initializer"
+                      }
+                    ],
+                    "name": "content"
+                  }
+                ],
+                "name": "bindings"
+              }
+            }
+          ],
+          "name": "bindings"
+        },
+        {
+          "$opt": {
+            "name": "body-decl",
+            "constraint": {
+              "constraint": "type",
+              "type": "DECL"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "NOT": [
+    {
+      "args": [
+        {
+          "name": "condition"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "condition"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "F?": [
+    {
+      "args": [
+        {
+          "name": "condition"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "condition"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "T?": [
+    {
+      "args": [
+        {
+          "name": "condition"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "name": "condition"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    }
+  ],
+  "OR": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "AND": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6,
+      "returns": {
+        "constraint": null
+      }
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "DO": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "body"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "body"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "MAP-CONTENTS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "body"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "body"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "MAP-DIRECTIONS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "body"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    },
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "body"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "zcode",
+      "minVersion": 1,
+      "maxVersion": 6
+    }
+  ],
+  "FILE-LENGTH": [
+    {
+      "args": [
+        {
+          "name": "channel",
+          "constraint": {
+            "constraint": "type",
+            "type": "CHANNEL"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "READSTRING": [
+    {
+      "args": [
+        {
+          "name": "dest",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "name": "channel",
+          "constraint": {
+            "constraint": "type",
+            "type": "CHANNEL"
+          }
+        },
+        {
+          "$opt": {
+            "name": "max-length-or-stop-chars"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "M-HPOS": [
+    {
+      "args": [
+        {
+          "name": "channel",
+          "constraint": {
+            "constraint": "type",
+            "type": "CHANNEL"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "INDENT-TO": [
+    {
+      "args": [
+        {
+          "name": "position",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "$opt": {
+            "name": "channel",
+            "constraint": {
+              "constraint": "type",
+              "type": "CHANNEL"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "PACKAGE": [
+    {
+      "args": [
+        {
+          "name": "pname",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ZPACKAGE": [
+    {
+      "args": [
+        {
+          "name": "pname",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ZZPACKAGE": [
+    {
+      "args": [
+        {
+          "name": "pname",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "DEFINITIONS": [
+    {
+      "args": [
+        {
+          "name": "pname",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ZSECTION": [
+    {
+      "args": [
+        {
+          "name": "pname",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ZZSECTION": [
+    {
+      "args": [
+        {
+          "name": "pname",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ENDPACKAGE": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "END-DEFINITIONS": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ENDSECTION": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ENTRY": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "RENTRY": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "USE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "STRING"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "INCLUDE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "STRING"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "USE-WHEN": [
+    {
+      "args": [
+        {
+          "name": "condition"
+        },
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "STRING"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "INCLUDE-WHEN": [
+    {
+      "args": [
+        {
+          "name": "condition"
+        },
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "STRING"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "COMPILING?": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "EMPTY?": [
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "TOP": [
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "GROW": [
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        },
+        {
+          "name": "end",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "beginning",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "OFFSET": [
+    {
+      "args": [
+        {
+          "name": "offset",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "name": "structure-pattern"
+        },
+        {
+          "$opt": {
+            "name": "value-pattern"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "INDEX": [
+    {
+      "args": [
+        {
+          "name": "offset",
+          "constraint": {
+            "constraint": "type",
+            "type": "OFFSET"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "LENGTH": [
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "LENGTH?": [
+    {
+      "args": [
+        {
+          "name": "st",
+          "constraint": {
+            "constraint": "structured"
+          }
+        },
+        {
+          "name": "limit",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "PUTREST": [
+    {
+      "args": [
+        {
+          "name": "list",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "LIST"
+          }
+        },
+        {
+          "name": "new-rest",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "LIST"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "SUBSTRUC": [
+    {
+      "args": [
+        {
+          "name": "from",
+          "constraint": {
+            "constraint": "structured"
+          }
+        },
+        {
+          "$opt": {
+            "name": "rest",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        },
+        {
+          "$opt": {
+            "name": "amount",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        },
+        {
+          "$opt": {
+            "name": "dest",
+            "constraint": {
+              "constraint": "structured"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 4,
+      "context": "mdl"
+    }
+  ],
+  "MEMBER": [
+    {
+      "args": [
+        {
+          "name": "needle"
+        },
+        {
+          "name": "haystack",
+          "constraint": {
+            "constraint": "structured"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "MEMQ": [
+    {
+      "args": [
+        {
+          "name": "needle"
+        },
+        {
+          "name": "haystack",
+          "constraint": {
+            "constraint": "structured"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "SORT": [
+    {
+      "args": [
+        {
+          "name": "predicate"
+        },
+        {
+          "name": "vector",
+          "constraint": {
+            "constraint": "type",
+            "type": "VECTOR"
+          }
+        },
+        {
+          "$opt": {
+            "name": "record-size",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        },
+        {
+          "$opt": {
+            "name": "key-offset",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "$seq": [
+              {
+                "name": "vector",
+                "constraint": {
+                  "constraint": "type",
+                  "type": "VECTOR"
+                }
+              },
+              {
+                "$opt": {
+                  "name": "record-size",
+                  "constraint": {
+                    "constraint": "type",
+                    "type": "FIX"
+                  }
+                }
+              }
+            ],
+            "name": "additional-sorts"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "TYPE": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "TYPE?": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "$rest": {
+            "name": "types",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "PRIMTYPE": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "TYPEPRIM": [
+    {
+      "args": [
+        {
+          "name": "type",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "NEWTYPE": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "name": "primtype-atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "decl"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "ALLTYPES": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "VALID-TYPE?": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "PRINTTYPE": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "handler"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "EVALTYPE": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "handler"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "APPLYTYPE": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "handler"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "MAKE-GVAL": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "APPLICABLE?": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "STRUCTURED?": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "LEGAL?": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "FORM": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "LIST": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "VECTOR": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "TUPLE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ILIST": [
+    {
+      "args": [
+        {
+          "name": "count",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "$opt": {
+            "name": "init"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "IVECTOR": [
+    {
+      "args": [
+        {
+          "name": "count",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "$opt": {
+            "name": "init"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "BYTE": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "CONS": [
+    {
+      "args": [
+        {
+          "name": "first"
+        },
+        {
+          "name": "rest",
+          "constraint": {
+            "constraint": "primtype",
+            "primype": "LIST"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "FUNCTION": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "name": "arg-list",
+          "constraint": {
+            "constraint": "type",
+            "type": "LIST"
+          }
+        },
+        {
+          "$opt": {
+            "name": "decl",
+            "constraint": {
+              "constraint": "type",
+              "type": "DECL"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "STRING": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ISTRING": [
+    {
+      "args": [
+        {
+          "name": "count",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "$opt": {
+            "name": "init"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ASCII": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ROUTINE-FLAGS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "flags",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ROUTINE": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "name": "arg-list",
+          "constraint": {
+            "constraint": "type",
+            "type": "LIST"
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "CONSTANT": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "type": "ADECL",
+              "elements": [
+                {
+                  "name": "atom",
+                  "constraint": {
+                    "constraint": "type",
+                    "type": "ATOM"
+                  }
+                },
+                {
+                  "name": "decl"
+                }
+              ],
+              "name": "content"
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "MSETG": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "type": "ADECL",
+              "elements": [
+                {
+                  "name": "atom",
+                  "constraint": {
+                    "constraint": "type",
+                    "type": "ATOM"
+                  }
+                },
+                {
+                  "name": "decl"
+                }
+              ],
+              "name": "content"
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "GLOBAL": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "type": "ADECL",
+              "elements": [
+                {
+                  "name": "atom",
+                  "constraint": {
+                    "constraint": "type",
+                    "type": "ATOM"
+                  }
+                },
+                {
+                  "name": "decl"
+                }
+              ],
+              "name": "content"
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "name": "default-value"
+        },
+        {
+          "$opt": {
+            "name": "decl"
+          }
+        },
+        {
+          "$opt": {
+            "name": "size",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 4,
+      "context": "mdl"
+    }
+  ],
+  "DEFINE-GLOBALS": [
+    {
+      "args": [
+        {
+          "name": "group-name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "type": "LIST",
+            "elements": [
+              {
+                "$or": [
+                  {
+                    "name": "content",
+                    "constraint": {
+                      "constraint": "type",
+                      "type": "ATOM"
+                    }
+                  },
+                  {
+                    "type": "ADECL",
+                    "elements": [
+                      {
+                        "name": "atom",
+                        "constraint": {
+                          "constraint": "type",
+                          "type": "ATOM"
+                        }
+                      },
+                      {
+                        "name": "decl"
+                      }
+                    ],
+                    "name": "content"
+                  }
+                ],
+                "name": "name"
+              },
+              {
+                "$opt": {
+                  "$or": [
+                    {
+                      "$literal": "BYTE"
+                    },
+                    {
+                      "$literal": "WORD"
+                    }
+                  ]
+                }
+              },
+              {
+                "$opt": {
+                  "name": "initializer"
+                }
+              }
+            ],
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "OBJECT": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "props",
+            "constraint": {
+              "constraint": "type",
+              "type": "LIST"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ROOM": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "props",
+            "constraint": {
+              "constraint": "type",
+              "type": "LIST"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "PROPDEF": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "name": "default-value"
+        },
+        {
+          "$rest": {
+            "name": "spec"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ZSTART": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "BIT-SYNONYM": [
+    {
+      "args": [
+        {
+          "name": "first",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "synonyms",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "VERSION": [
+    {
+      "args": [
+        {
+          "name": "version-expr"
+        },
+        {
+          "$opt": {
+            "$literal": "TIME"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "CHECK-VERSION?": [
+    {
+      "args": [
+        {
+          "name": "version-expr"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ORDER-OBJECTS?": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ORDER-TREE?": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ORDER-FLAGS?": [
+    {
+      "args": [
+        {
+          "$literal": "LAST"
+        },
+        {
+          "$rest": {
+            "name": "objects",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "ZIP-OPTIONS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "LONG-WORDS?": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "enabled",
+            "constraint": null
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "FUNNY-GLOBALS?": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "enabled",
+            "constraint": null
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "CHRSET": [
+    {
+      "args": [
+        {
+          "name": "alphabet-num",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "$rest": {
+            "name": "args"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "LANGUAGE": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "escape-char",
+            "constraint": {
+              "constraint": "type",
+              "type": "CHARACTER"
+            }
+          }
+        },
+        {
+          "$opt": {
+            "name": "change-chrset",
+            "constraint": null
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "DIRECTIONS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "BUZZ": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "VOC": [
+    {
+      "args": [
+        {
+          "name": "text",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "$opt": {
+            "name": "type"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "SYNTAX": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "SYNONYM": [
+    {
+      "args": [
+        {
+          "name": "original",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "synonyms",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "VERB-SYNONYM": [
+    {
+      "args": [
+        {
+          "name": "original",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "synonyms",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "PREP-SYNONYM": [
+    {
+      "args": [
+        {
+          "name": "original",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "synonyms",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ADJ-SYNONYM": [
+    {
+      "args": [
+        {
+          "name": "original",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "synonyms",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "DIR-SYNONYM": [
+    {
+      "args": [
+        {
+          "name": "original",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "synonyms",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "TELL-TOKENS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ADD-TELL-TOKENS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ADD-WORD": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "STRING"
+              }
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "$opt": {
+            "name": "type",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "$opt": {
+            "name": "value"
+          }
+        },
+        {
+          "$opt": {
+            "name": "flags",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 4,
+      "context": "mdl"
+    }
+  ],
+  "NEW-ADD-WORD": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "STRING"
+              }
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "$opt": {
+            "name": "type",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "$opt": {
+            "name": "value"
+          }
+        },
+        {
+          "$opt": {
+            "name": "flags",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 4,
+      "context": "mdl"
+    }
+  ],
+  "SPNAME": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "PNAME": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "PARSE": [
+    {
+      "args": [
+        {
+          "name": "text",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "$opt": {
+            "$literal": "10"
+          }
+        },
+        {
+          "$opt": {
+            "$or": [
+              {
+                "name": "lookup-ob-list",
+                "constraint": {
+                  "constraint": "type",
+                  "type": "OBLIST"
+                }
+              },
+              {
+                "name": "lookup-ob-list",
+                "constraint": {
+                  "constraint": "type",
+                  "type": "LIST"
+                }
+              }
+            ],
+            "name": "lookup-ob-list"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "LPARSE": [
+    {
+      "args": [
+        {
+          "name": "text",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "$opt": {
+            "$literal": "10"
+          }
+        },
+        {
+          "$opt": {
+            "$or": [
+              {
+                "name": "lookup-ob-list",
+                "constraint": {
+                  "constraint": "type",
+                  "type": "OBLIST"
+                }
+              },
+              {
+                "name": "lookup-ob-list",
+                "constraint": {
+                  "constraint": "type",
+                  "type": "LIST"
+                }
+              }
+            ],
+            "name": "lookup-ob-list"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "UNPARSE": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "LOOKUP": [
+    {
+      "args": [
+        {
+          "name": "str",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "name": "oblist",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBLIST"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "INSERT": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "string-or-atom",
+              "constraint": {
+                "constraint": "type",
+                "type": "STRING"
+              }
+            },
+            {
+              "name": "string-or-atom",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            }
+          ],
+          "name": "string-or-atom"
+        },
+        {
+          "name": "oblist",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBLIST"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "LINK": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "str",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "name": "oblist",
+          "constraint": {
+            "constraint": "type",
+            "type": "OBLIST"
+          }
+        }
+      ],
+      "minArgs": 3,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "ATOM": [
+    {
+      "args": [
+        {
+          "name": "pname",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ROOT": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "MOBLIST": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "OBLIST?": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "BLOCK": [
+    {
+      "args": [
+        {
+          "name": "list",
+          "constraint": {
+            "constraint": "type",
+            "type": "LIST"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ENDBLOCK": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "SETG20": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "GASSIGNED?": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "GUNASSIGN": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "GBOUND?": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "GDECL": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "$seq": [
+              {
+                "type": "LIST",
+                "elements": [
+                  {
+                    "$rest": {
+                      "name": "atoms",
+                      "constraint": {
+                        "constraint": "type",
+                        "type": "ATOM"
+                      }
+                    }
+                  }
+                ],
+                "name": "atoms"
+              },
+              {
+                "name": "decl"
+              }
+            ],
+            "name": "pairs"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "DECL?": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "pattern"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "DECL-CHECK": [
+    {
+      "args": [
+        {
+          "name": "enable",
+          "constraint": null
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "GET-DECL": [
+    {
+      "args": [
+        {
+          "name": "item"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "PUT-DECL": [
+    {
+      "args": [
+        {
+          "name": "item"
+        },
+        {
+          "name": "pattern"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "UNASSIGN": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "env",
+            "constraint": {
+              "constraint": "type",
+              "type": "ENVIRONMENT"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "BOUND?": [
+    {
+      "args": [
+        {
+          "name": "atom",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "env",
+            "constraint": {
+              "constraint": "type",
+              "type": "ENVIRONMENT"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "GETPROP": [
+    {
+      "args": [
+        {
+          "name": "item"
+        },
+        {
+          "name": "indicator"
+        },
+        {
+          "$opt": {
+            "name": "default-value"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "PUTPROP": [
+    {
+      "args": [
+        {
+          "name": "item"
+        },
+        {
+          "name": "indicator"
+        },
+        {
+          "$opt": {
+            "name": "value"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "ASSOCIATIONS": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "NEXT": [
+    {
+      "args": [
+        {
+          "name": "asoc",
+          "constraint": {
+            "constraint": "type",
+            "type": "ASOC"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "ITEM": [
+    {
+      "args": [
+        {
+          "name": "asoc",
+          "constraint": {
+            "constraint": "type",
+            "type": "ASOC"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "INDICATOR": [
+    {
+      "args": [
+        {
+          "name": "asoc",
+          "constraint": {
+            "constraint": "type",
+            "type": "ASOC"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "AVALUE": [
+    {
+      "args": [
+        {
+          "name": "asoc",
+          "constraint": {
+            "constraint": "type",
+            "type": "ASOC"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "SET-DEFSTRUCT-FILE-DEFAULTS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "DEFSTRUCT": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$or": [
+            {
+              "name": "base-type",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "type": "LIST",
+              "elements": [
+                {
+                  "name": "base-type",
+                  "constraint": {
+                    "constraint": "type",
+                    "type": "ATOM"
+                  }
+                },
+                {
+                  "$rest": {
+                    "$or": [
+                      {
+                        "type": "FORM",
+                        "elements": [
+                          {
+                            "$literal": "QUOTE"
+                          },
+                          {
+                            "$or": [
+                              {
+                                "$literal": "NODECL"
+                              },
+                              {
+                                "$literal": "NOTYPE"
+                              },
+                              {
+                                "$literal": "PRINTTYPE"
+                              },
+                              {
+                                "$literal": "CONSTRUCTOR"
+                              }
+                            ]
+                          }
+                        ],
+                        "name": "clauses"
+                      },
+                      {
+                        "type": "LIST",
+                        "elements": [
+                          {
+                            "$or": [
+                              {
+                                "$literal": "'NTH"
+                              },
+                              {
+                                "$literal": "'PUT"
+                              },
+                              {
+                                "$literal": "'PRINTTYPE"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "atom",
+                            "constraint": {
+                              "constraint": "type",
+                              "type": "ATOM"
+                            }
+                          }
+                        ],
+                        "name": "clauses"
+                      },
+                      {
+                        "type": "LIST",
+                        "elements": [
+                          {
+                            "$literal": "'START-OFFSET"
+                          },
+                          {
+                            "name": "fix",
+                            "constraint": {
+                              "constraint": "type",
+                              "type": "FIX"
+                            }
+                          }
+                        ],
+                        "name": "clauses"
+                      },
+                      {
+                        "type": "LIST",
+                        "elements": [
+                          {
+                            "$or": [
+                              {
+                                "$literal": "'CONSTRUCTOR"
+                              },
+                              {
+                                "$literal": "'INIT-ARGS"
+                              }
+                            ]
+                          },
+                          {
+                            "$rest": {
+                              "name": "body"
+                            }
+                          }
+                        ],
+                        "name": "clauses"
+                      }
+                    ],
+                    "name": "clauses"
+                  }
+                }
+              ],
+              "name": "base-type"
+            }
+          ],
+          "name": "base-type"
+        },
+        {
+          "$rest": {
+            "type": "LIST",
+            "elements": [
+              {
+                "name": "name",
+                "constraint": {
+                  "constraint": "type",
+                  "type": "ATOM"
+                }
+              },
+              {
+                "name": "decl"
+              },
+              {
+                "$rest": {
+                  "$or": [
+                    {
+                      "$literal": "'NONE",
+                      "name": "parts"
+                    },
+                    {
+                      "$seq": [
+                        {
+                          "$or": [
+                            {
+                              "$literal": "'NTH"
+                            },
+                            {
+                              "$literal": "'PUT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "atom",
+                          "constraint": {
+                            "constraint": "type",
+                            "type": "ATOM"
+                          }
+                        }
+                      ],
+                      "name": "parts"
+                    },
+                    {
+                      "$seq": [
+                        {
+                          "$literal": "'OFFSET"
+                        },
+                        {
+                          "name": "fix",
+                          "constraint": {
+                            "constraint": "type",
+                            "type": "FIX"
+                          }
+                        }
+                      ],
+                      "name": "parts"
+                    },
+                    {
+                      "name": "parts"
+                    }
+                  ],
+                  "name": "parts"
+                }
+              }
+            ],
+            "name": "field-specs"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "DEFINE": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "name": "arg-list",
+          "constraint": {
+            "constraint": "type",
+            "type": "LIST"
+          }
+        },
+        {
+          "$opt": {
+            "name": "decl",
+            "constraint": {
+              "constraint": "type",
+              "type": "DECL"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "DEFINE20": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "name": "arg-list",
+          "constraint": {
+            "constraint": "type",
+            "type": "LIST"
+          }
+        },
+        {
+          "$opt": {
+            "name": "decl",
+            "constraint": {
+              "constraint": "type",
+              "type": "DECL"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "DEFMAC": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$opt": {
+            "name": "activation-atom",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        },
+        {
+          "name": "arg-list",
+          "constraint": {
+            "constraint": "type",
+            "type": "LIST"
+          }
+        },
+        {
+          "$opt": {
+            "name": "decl",
+            "constraint": {
+              "constraint": "type",
+              "type": "DECL"
+            }
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "QUOTE": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "EVAL": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "$opt": {
+            "name": "env",
+            "constraint": {
+              "constraint": "type",
+              "type": "ENVIRONMENT"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "EVAL-IN-SEGMENT": [
+    {
+      "args": [
+        {
+          "name": "dummy1"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "$opt": {
+            "name": "dummy2"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 3,
+      "context": "mdl"
+    }
+  ],
+  "EXPAND": [
+    {
+      "args": [
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "MAPF": [
+    {
+      "args": [
+        {
+          "name": "finalf"
+        },
+        {
+          "name": "loopf",
+          "constraint": {
+            "constraint": "applicable"
+          }
+        },
+        {
+          "$rest": {
+            "name": "structs",
+            "constraint": {
+              "constraint": "structured"
+            }
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "MAPR": [
+    {
+      "args": [
+        {
+          "name": "finalf"
+        },
+        {
+          "name": "loopf",
+          "constraint": {
+            "constraint": "applicable"
+          }
+        },
+        {
+          "$rest": {
+            "name": "structs",
+            "constraint": {
+              "constraint": "structured"
+            }
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "MAPRET": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "MAPSTOP": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "MAPLEAVE": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "value"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "EQVB": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "MIN": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "MAX": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args",
+            "constraint": {
+              "constraint": "type",
+              "type": "FIX"
+            }
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "OR?": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "AND?": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "INSERT-FILE": [
+    {
+      "args": [
+        {
+          "name": "file",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "FLOAD": [
+    {
+      "args": [
+        {
+          "name": "file",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "XFLOAD": [
+    {
+      "args": [
+        {
+          "name": "file",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        },
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "FILE-FLAGS": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "flags",
+            "constraint": {
+              "constraint": "type",
+              "type": "ATOM"
+            }
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "DELAY-DEFINITION": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "REPLACE-DEFINITION": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "DEFAULT-DEFINITION": [
+    {
+      "args": [
+        {
+          "name": "name",
+          "constraint": {
+            "constraint": "type",
+            "type": "ATOM"
+          }
+        },
+        {
+          "$rest": {
+            "name": "body"
+          },
+          "required": true
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "COMPILATION-FLAG": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "STRING"
+              }
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "$opt": {
+            "name": "value"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "COMPILATION-FLAG-DEFAULT": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "STRING"
+              }
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "COMPILATION-FLAG-VALUE": [
+    {
+      "args": [
+        {
+          "$or": [
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "ATOM"
+              }
+            },
+            {
+              "name": "content",
+              "constraint": {
+                "constraint": "type",
+                "type": "STRING"
+              }
+            }
+          ],
+          "name": "name"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "TIME": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ID": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "STACK": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "SNAME": [
+    {
+      "args": [
+        {
+          "name": "arg"
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "GC-MON": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "BLOAT": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ZSTR-ON": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ZSTR-OFF": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ENDLOAD": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "PUT-PURE-HERE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "DEFAULTS-DEFINED": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "CHECKPOINT": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "BEGIN-SEGMENT": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "END-SEGMENT": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "DEFINE-SEGMENT": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "FREQUENT-WORDS?": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "NEVER-ZAP-TO-SOURCE-DIRECTORY?": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ASK-FOR-PICTURE-FILE?": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "PICFILE": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "GC": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "ERROR": [
+    {
+      "args": [
+        {
+          "$rest": {
+            "name": "args"
+          }
+        }
+      ],
+      "minArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "WARN-AS-ERROR?": [
+    {
+      "args": [
+        {
+          "$opt": {
+            "name": "enabled",
+            "constraint": null
+          }
+        }
+      ],
+      "minArgs": 0,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ],
+  "DESC-BUILTINS!-YOMIN": [
+    {
+      "args": [],
+      "minArgs": 0,
+      "maxArgs": 0,
+      "context": "mdl"
+    }
+  ],
+  "PRIN1": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "$opt": {
+            "name": "channel",
+            "constraint": {
+              "constraint": "type",
+              "type": "CHANNEL"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "PRINC": [
+    {
+      "args": [
+        {
+          "name": "value"
+        },
+        {
+          "$opt": {
+            "name": "channel",
+            "constraint": {
+              "constraint": "type",
+              "type": "CHANNEL"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "PRINT-MANY": [
+    {
+      "args": [
+        {
+          "name": "channel",
+          "constraint": {
+            "constraint": "type",
+            "type": "CHANNEL"
+          }
+        },
+        {
+          "name": "printer"
+        },
+        {
+          "$rest": {
+            "name": "items"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "IMAGE": [
+    {
+      "args": [
+        {
+          "name": "ch",
+          "constraint": {
+            "constraint": "type",
+            "type": "FIX"
+          }
+        },
+        {
+          "$opt": {
+            "name": "channel",
+            "constraint": {
+              "constraint": "type",
+              "type": "CHANNEL"
+            }
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "OPEN": [
+    {
+      "args": [
+        {
+          "$literal": "\"READ\""
+        },
+        {
+          "name": "path",
+          "constraint": {
+            "constraint": "type",
+            "type": "STRING"
+          }
+        }
+      ],
+      "minArgs": 2,
+      "maxArgs": 2,
+      "context": "mdl"
+    }
+  ],
+  "CLOSE": [
+    {
+      "args": [
+        {
+          "name": "channel",
+          "constraint": {
+            "constraint": "type",
+            "type": "CHANNEL"
+          }
+        }
+      ],
+      "minArgs": 1,
+      "maxArgs": 1,
+      "context": "mdl"
+    }
+  ]
+}

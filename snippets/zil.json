@@ -1,0 +1,133 @@
+{
+    "define": {
+        "prefix": "define",
+        "body": [
+            "<DEFINE ${1:name} ($2)",
+            "    $0>"
+        ],
+        "description": "DEFINE a function"
+    },
+    "defmac": {
+        "prefix": "defmac",
+        "body": [
+            "<DEFMAC ${1:name} ($2)",
+            "    $0>"
+        ],
+        "description": "DEFine a MACro"
+    },
+    "cond": {
+        "prefix": "cond",
+        "body": [
+            "<COND (${1:condition} ${2:body})",
+            "      (ELSE ${3:body})>"
+        ],
+        "description": "CONDitional"
+    },
+    "object": {
+        "prefix": "object",
+        "body": [
+            "<OBJECT ${1:code-name}",
+            "    (DESC \"${2:visible name}\")",
+            "    (LOC ${3:initial-location})",
+            "    (SYNONYM ${4:synonyms})",
+            "    (ADJECTIVE ${5:adjectives})",
+            "    (FLAGS ${6:TAKEBIT})>",
+            "$0"
+        ],
+        "description": "OBJECT definition"
+    },
+    "objecta": {
+        "prefix": "objecta",
+        "body": [
+            "<OBJECT ${1:code-name}",
+            "    (DESC \"${2:visible name}\")",
+            "    (LOC ${3:initial-location})",
+            "    (SYNONYM ${4:synonyms})",
+            "    (ADJECTIVE ${5:adjectives})",
+            "    (ACTION ${6:$1-F})",
+            "    (FLAGS ${7:TAKEBIT})>",
+            "",
+            "<ROUTINE $6 ($8)",
+            "    $0>"
+        ],
+        "description": "OBJECT with ACTION routine"
+    },
+    "room": {
+        "prefix": "room",
+        "body": [
+            "<ROOM ${1:code-name}",
+            "    (DESC \"${2:visible name}\")",
+            "    (LOC ROOMS)",
+            "    (${3:NORTH} ${4:TO room})",
+            "    (${5:SOUTH} ${6:SORRY \"You can't go that way.\"})",
+            "    (${7:EAST} ${8:PER routine})",
+            "    (${9:WEST} ${10:TO room IF door IS OPEN})",
+            "    (FLAGS ${11:LIGHTBIT})>",
+            "$0"
+        ],
+        "description": "ROOM definition"
+    },
+    "rooma": {
+        "prefix": "rooma",
+        "body": [
+            "<ROOM ${1:name}",
+            "    (DESC \"${2:visible name}\")",
+            "    (LOC ROOMS)",
+            "    (${3:NORTH} ${4:TO room})",
+            "    (${5:SOUTH} ${6:SORRY \"You can't go that way.\"})",
+            "    (${7:EAST} ${8:PER routine})",
+            "    (${9:WEST} ${10:TO room IF door IS OPEN})",
+            "    (ACTION ${11:$1-F})",
+            "    (FLAGS ${12:LIGHTBIT})>",
+            "",
+            "<ROUTINE ${11:$1-F} ($13)",
+            "    $0>"
+        ],
+        "description": "ROOM with ACTION routine"
+    },
+    "verb": {
+        "prefix": "verb",
+        "body": [
+            "<SYNTAX ${1:verb} ${2:OBJECT} ${3:OBJECT} = ${4:V-$1}>",
+            "",
+            "<ROUTINE ${4:V-$1} ($5)",
+            "    $0>"
+        ],
+        "description": "New verb SYNTAX and ROUTINE"
+    },
+    "mainfile": {
+        "prefix": "mainfile",
+        "body": [
+            "\"${1:${TM_FILENAME_BASE/^(.*)$/${1:/upcase}/}} main file\"",
+            "",
+            "<VERSION ${2|ZIP,EZIP,XZIP,YZIP,8|}>",
+            "<CONSTANT RELEASEID 1>",
+            "",
+            "\"Main loop\"",
+            "",
+            "<CONSTANT GAME-BANNER",
+            "\"$1|",
+            "${3:An interactive fiction} by ${4:AUTHOR NAME}\">",
+            "",
+            "<ROUTINE GO ()",
+            "    <CRLF> <CRLF>",
+            "    <TELL \"${5:INTRODUCTORY TEXT!}\" CR CR>",
+            "    <V-VERSION> <CRLF>",
+            "    <SETG HERE ,STARTROOM>",
+            "    <MOVE ,PLAYER ,HERE>",
+            "    <V-LOOK>",
+            "    <MAIN-LOOP>>",
+            "",
+            "<INSERT-FILE \"parser\">",
+            "",
+            "\"Objects\"",
+            "",
+            "<OBJECT STARTROOM",
+            "    (IN ROOMS)",
+            "    (DESC \"${6:START ROOM}\")",
+            "    (FLAGS LIGHTBIT)>",
+            "$0"
+        ],
+        "description": "An empty main game file"
+    }
+}

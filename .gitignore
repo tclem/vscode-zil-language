@@ -1,0 +1,6 @@
+*.vsix
+dist
+node_modules
+out
+zil_debugger.log
+.vscode-test

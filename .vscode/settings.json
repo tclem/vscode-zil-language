@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "node_modules": true,
+        "out": true,
+        "zil_debugger.log": true,
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "out/**/*.js": true,
+        ".vscode-test/**": true
+    },
+}

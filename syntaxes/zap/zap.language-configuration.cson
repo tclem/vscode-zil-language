@@ -1,0 +1,46 @@
+comments:
+    # symbol used for single line comment. Remove this entry if your language does not support line comments
+    lineComment: ";",
+    # symbols used for start and end a block comment. Remove this entry if your language does not support block comments
+    # blockComment: [ ";[\"", "\"]" ]
+
+# symbols used as brackets
+brackets: []
+
+# symbols that are auto closed when typing
+autoClosingPairs: [
+    { open: "\"", close: "\"", notIn: ["string"] }
+]
+
+# symbols that that can be used to surround a selection
+surroundingPairs: [
+    ["\"", "\""]
+]
+
+folding:
+    # offSide: false
+    markers:
+        # start: '''(?x)
+        #     # BOL and space
+        #     ^ \\s*
+        #     # optional label
+        #     (?: [A-Za-z?$#&] [A-Za-z0-9\\-?$#&.]* \\s* : :? \\s* )?
+        #     # .FUNCT or .TABLE
+        #     \\. (?: FUNCT | TABLE ) \\b
+        #     '''
+        # end: '''(?x)
+        #     # BOL and space
+        #     ^ \\s*
+        #     # optional label
+        #     (?: [A-Za-z?$#&] [A-Za-z0-9\\-?$#&.]* \\s* : :? \\s* )?
+        #     # .ENDT or nothing
+        #     (?: \\.ENDT \\b | ; | $ )?
+        #     '''
+        start: '^\\s*(?:[A-Za-z?$#&][A-Za-z0-9\\-?$#&.]*\\s*::?\\s*)?\\.(?:TABLE|FUNCT|VOCBEG|DEBUG-ROUTINE)(?=\\s|$)'
+        end: '^\\s*(?:$|;.*$|\\.(?:ENDT|VOCEND|DEBUG-ROUTINE-END)(?=\\s|$))'
+
+wordPattern: '[A-Za-z?$#&][A-Za-z0-9\\-?$#&.]*'
+
+# indentationRules:
+#     increaseIndentPattern: ''
+#     decreaseIndentPattern: ''

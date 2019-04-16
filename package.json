@@ -1,0 +1,530 @@
+{
+    "name": "zil-language",
+    "displayName": "ZIL",
+    "description": "Support for the ZIL language (and MDL/Muddle)",
+    "version": "0.2.5",
+    "publisher": "zilf",
+    "license": "MIT",
+    "contributors": [
+        "Jesse McGrew"
+    ],
+    "repository": {
+        "type": "hg",
+        "url": "https://bitbucket.org/zilf/vscode-zil-language"
+    },
+    "bugs": {
+        "url": "https://bitbucket.org/zilf/vscode-zil-language/issues"
+    },
+    "engines": {
+        "vscode": "^1.30.2"
+    },
+    "categories": [
+        "Programming Languages",
+        "Debuggers",
+        "Snippets"
+    ],
+    "keywords": [
+        "zil",
+        "zilf",
+        "zmachine",
+        "gamedev"
+    ],
+    "main": "./dist/extension",
+    "scripts": {
+        "compile": "run-s compile:*",
+        "compile:ts": "tsc -p ./",
+        "compile:syntaxes": "run-p compile:syntaxes:*",
+        "compile:syntaxes:zap": "run-p compile:syntaxes:zap:*",
+        "compile:syntaxes:zap:grammar": "cson2json ./syntaxes/zap/zap.tmLanguage.cson > ./out/zap.tmLanguage.json",
+        "compile:syntaxes:zap:langconfig": "cson2json ./syntaxes/zap/zap.language-configuration.cson > ./out/zap.language-configuration.json",
+        "compile:syntaxes:zil": "run-p compile:syntaxes:zil:*",
+        "compile:syntaxes:zil:grammar": "cson2json ./syntaxes/zil/zil.tmLanguage.cson > ./out/zil.tmLanguage.json",
+        "compile:syntaxes:zil:langconfig": "cson2json ./syntaxes/zil/zil.language-configuration.cson > ./out/zil.language-configuration.json",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test",
+        "vscode:prepublish": "npm run compile && webpack --mode production",
+        "watch": "run-p watch:*",
+        "watch:ts": "tsc -watch -p ./",
+        "watch:syntaxes": "run-p watch:syntaxes:*",
+        "watch:syntaxes:zap": "watch \"npm run compile:syntaxes:zap\" ./syntaxes/zap --wait=5",
+        "watch:syntaxes:zil": "watch \"npm run compile:syntaxes:zil\" ./syntaxes/zil --wait=5",
+        "watch-webpack": "webpack --mode none --watch",
+        "webpack": "npm run compile && webpack --mode none",
+        "test-compile": "tsc -p ./"
+    },
+    "dependencies": {
+        "freeport-promise": "^1.1.0",
+        "jsonc-parser": "^2.1.0",
+        "lodash.isequal": "^4.5.0",
+        "strip-bom-stream": "^3.0.0",
+        "vscode-debugadapter": "^1.33.0",
+        "vscode-debugprotocol": "^1.33.0"
+    },
+    "devDependencies": {
+        "@types/jasmine": "^2.8.14",
+        "@types/lodash.isequal": "^4.5.3",
+        "@types/node": "^7.10.2",
+        "copy-webpack-plugin": "^5.0.2",
+        "cson": "^5.1.0",
+        "eslint": "^4.19.1",
+        "jasmine": "^2.99.0",
+        "jasmine-ts-console-reporter": "^3.1.1",
+        "nodemon": "^1.18.9",
+        "npm-run-all": "^4.1.5",
+        "ts-loader": "^5.3.3",
+        "tslint": "^5.15.0",
+        "tslint-no-circular-imports": "^0.6.1",
+        "typescript": "^3.2.2",
+        "vscode": "^1.1.26",
+        "vscode-debugadapter-testsupport": "^1.33.0",
+        "watch": "^1.0.2",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.3.0"
+    },
+    "activationEvents": [
+        "onCommand:zil.debugger.getStoryFilePath",
+        "onCommand:zil.debugger.getDebugFilePath",
+        "onCommand:zil.debugger.getOutputPathWithoutExtension",
+        "onCommand:zil.debugger.getOutputZVersion",
+        "onCommand:zil.jumpToMatchingBracket",
+        "onCommand:zil.selectToMatchingBracket",
+        "onCommand:zil.startREPL",
+        "onCommand:workbench.action.tasks.runTask",
+        "onDebug",
+        "onLanguage:zil",
+        "onLanguage:zap"
+    ],
+    "contributes": {
+        "breakpoints": [
+            {
+                "language": "zil"
+            }
+        ],
+        "debuggers": [
+            {
+                "type": "zmachine",
+                "label": "Z-Machine (ZLR)",
+                "languages": [
+                    "zil"
+                ],
+                "program": "./dist/zilDebug.js",
+                "runtime": "node",
+                "configurationAttributes": {
+                    "launch": {
+                        "required": [],
+                        "properties": {
+                            "storyFile": {
+                                "type": "string",
+                                "description": "Absolute path to the compiled story file.",
+                                "default": "${command:detectStoryFile}"
+                            },
+                            "debugFile": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "description": "Absolute path to the debug info file.",
+                                "default": "${command:detectDebugFile}"
+                            },
+                            "stopOnEntry": {
+                                "type": "boolean",
+                                "description": "Automatically stop after launch.",
+                                "default": false
+                            },
+                            "predictableRandom": {
+                                "type": "boolean",
+                                "description": "Use the same random number generator each time.",
+                                "default": false
+                            },
+                            "interpreter": {
+                                "type": "string",
+                                "description": "Absolute path to Z-Machine interpreter (ConsoleZLR)."
+                            },
+                            "interpreterArgs": {
+                                "type": "array",
+                                "items": "string",
+                                "description": "Extra arguments to pass to the interpreter."
+                            },
+                            "console": {
+                                "type": "string",
+                                "enum": [
+                                    "integratedTerminal",
+                                    "externalTerminal"
+                                ],
+                                "enumDescriptions": [
+                                    "Run the game in a terminal tab.",
+                                    "Run the game in a separate console window."
+                                ],
+                                "description": "Where to show the game's output.",
+                                "default": "externalTerminal"
+                            },
+                            "trace": {
+                                "type": "boolean",
+                                "description": "More verbose logging for extension development.",
+                                "default": false
+                            }
+                        }
+                    }
+                },
+                "configurationSnippets": [
+                    {
+                        "label": "Z-Machine: ZIL Game",
+                        "description": "Debug a ZIL game in an integrated terminal.",
+                        "body": {
+                            "type": "zmachine",
+                            "request": "launch",
+                            "name": "ZIL Game",
+                            "storyFile": "^\"\\${command:detectStoryFile}\"",
+                            "debugFile": "^\"\\${command:detectDebugFile}\"",
+                            "console": "integratedTerminal",
+                            "stopOnEntry": false,
+                            "predictableRandom": false
+                        }
+                    },
+                    {
+                        "label": "Z-Machine: ZIL Game (external)",
+                        "description": "Debug a ZIL game in an external console window.",
+                        "body": {
+                            "type": "zmachine",
+                            "request": "launch",
+                            "name": "ZIL Game (external)",
+                            "storyFile": "^\"\\${command:detectStoryFile}\"",
+                            "debugFile": "^\"\\${command:detectDebugFile}\"",
+                            "console": "externalTerminal",
+                            "stopOnEntry": false,
+                            "predictableRandom": false
+                        }
+                    },
+                    {
+                        "label": "Z-Machine: ZIL Game (extension development)",
+                        "description": "Debug a ZIL game in an external console window with a debug adapter in server mode.",
+                        "body": {
+                            "type": "zmachine",
+                            "request": "launch",
+                            "name": "ZIL Game (extension development)",
+                            "storyFile": "^\"\\${command:detectStoryFile}\"",
+                            "debugFile": "^\"\\${command:detectDebugFile}\"",
+                            "console": "integratedTerminal",
+                            "stopOnEntry": false,
+                            "predictableRandom": false,
+                            "debugServer": 4711,
+                            "trace": true,
+                            "interpreterArgs": "^[\n\t\t// \"-launchDebugger\",\n\t]"
+                        }
+                    }
+                ],
+                "variables": {
+                    "detectStoryFile": "zil.debugger.getStoryFilePath",
+                    "detectDebugFile": "zil.debugger.getDebugFilePath"
+                }
+            }
+        ],
+        "configuration": [
+            {
+                "id": "zil",
+                "type": "object",
+                "title": "ZIL",
+                "properties": {
+                    "zil.autoDetect": {
+                        "scope": "resource",
+                        "type": "string",
+                        "enum": [
+                            "off",
+                            "on"
+                        ],
+                        "default": "on",
+                        "description": "Whether to auto-detect ZIL build tasks"
+                    },
+                    "zil.mainFile": {
+                        "scope": "resource",
+                        "type": "string",
+                        "default": null,
+                        "description": "Name of the main .zil file"
+                    },
+                    "zil.compiler.path": {
+                        "scope": "resource",
+                        "type": "string",
+                        "description": "Path to the ZIL compiler (e.g. zilf.exe)"
+                    },
+                    "zil.assembler.path": {
+                        "scope": "resource",
+                        "type": "string",
+                        "description": "Path to the ZAP assembler (e.g. zapf.exe)"
+                    },
+                    "zil.debugger.path": {
+                        "scope": "resource",
+                        "type": "string",
+                        "description": "Path to the ZLR debug interpreter (e.g. consolezlr.exe)",
+                        "default": null
+                    },
+                    "zil.rainbowBrackets.enabled": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Whether to color brackets to indicate nesting level",
+                        "scope": "resource"
+                    },
+                    "zil.rainbowBrackets.bracketColors": {
+                        "type": "array",
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "array",
+                                    "minItems": 2,
+                                    "maxItems": 2,
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            ]
+                        },
+                        "default": [
+                            [
+                                "#000",
+                                "#ccc"
+                            ],
+                            "#0098e6",
+                            "#e16d6d",
+                            "#3fa455",
+                            "#c968e6",
+                            "#999",
+                            "#ce7e00"
+                        ],
+                        "description": "Array of colors to use for nested brackets",
+                        "scope": "resource"
+                    },
+                    "zil.rainbowBrackets.cycleBracketColors": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "If nesting level is greater than amount of colors, start counting over",
+                        "scope": "resource"
+                    },
+                    "zil.misplacedBracketStyle": {
+                        "type": "object",
+                        "default": {
+                            "light": {
+                                "color": "#fff",
+                                "backgroundColor": "#c33"
+                            },
+                            "dark": {
+                                "color": "#ccc",
+                                "backgroundColor": "#933"
+                            }
+                        },
+                        "description": "Style of misplaced bracket",
+                        "scope": "resource"
+                    },
+                    "zil.matchedBracketStyle": {
+                        "type": "object",
+                        "default": {
+                            "border": "2px solid #888"
+                        },
+                        "description": "Style of pair bracket highlight",
+                        "scope": "resource"
+                    },
+                    "zil.trace": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "More verbose logging for extension development.",
+                        "scope": "window"
+                    }
+                },
+                "required": [
+                    "zil.compiler.path",
+                    "zil.assembler.path"
+                ]
+            }
+        ],
+        "configurationDefaults": {
+            "[zil]": {
+                "editor.matchBrackets": false
+            }
+        },
+        "commands": [
+            {
+                "command": "zil.startREPL",
+                "title": "Start REPL",
+                "category": "ZIL"
+            },
+            {
+                "command": "zil.jumpToMatchingBracket",
+                "title": "Jump to matching bracket",
+                "category": "ZIL"
+            },
+            {
+                "command": "zil.selectToMatchingBracket",
+                "title": "Select to matching bracket",
+                "category": "ZIL"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "zil.jumpToMatchingBracket",
+                "when": "editorTextFocus && editorLangId == zil",
+                "key": "ctrl+shift+\\",
+                "mac": "cmd+shift+\\"
+            },
+            {
+                "command": "zil.selectToMatchingBracket",
+                "when": "editorTextFocus && editorLangId == zil",
+                "key": "ctrl+shift+alt+\\",
+                "mac": "cmd+shift+alt+\\"
+            }
+        ],
+        "languages": [
+            {
+                "id": "zil",
+                "aliases": [
+                    "ZIL",
+                    "zil",
+                    "MDL",
+                    "mdl"
+                ],
+                "extensions": [
+                    ".mud",
+                    ".zil"
+                ],
+                "configuration": "./dist/zil.language-configuration.json"
+            },
+            {
+                "id": "zap",
+                "aliases": [
+                    "ZAP",
+                    "zap"
+                ],
+                "extensions": [
+                    ".zap",
+                    ".xzap"
+                ],
+                "configuration": "./dist/zap.language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "zil",
+                "scopeName": "source.zil",
+                "path": "./dist/zil.tmLanguage.json"
+            },
+            {
+                "language": "zap",
+                "scopeName": "source.zap",
+                "path": "./dist/zap.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "zil",
+                "path": "./snippets/zil.json"
+            }
+        ],
+        "taskDefinitions": [
+            {
+                "type": "zilf",
+                "required": [
+                    "file",
+                    "build"
+                ],
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "description": "The .zil file to compile"
+                    },
+                    "build": {
+                        "type": "string",
+                        "enum": [
+                            "release",
+                            "debug"
+                        ],
+                        "enumDescriptions": [
+                            "Build without debug information.",
+                            "Build with debug information."
+                        ],
+                        "description": "The type of build to make (debug/release)"
+                    }
+                }
+            },
+            {
+                "type": "zilf+zapf",
+                "required": [
+                    "file",
+                    "build"
+                ],
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "description": "The .zil file to compile"
+                    },
+                    "build": {
+                        "type": "string",
+                        "enum": [
+                            "release",
+                            "debug"
+                        ],
+                        "enumDescriptions": [
+                            "Build without debug information.",
+                            "Build with debug information."
+                        ],
+                        "description": "The type of build to make (debug/release)"
+                    }
+                }
+            },
+            {
+                "type": "zapf",
+                "required": [
+                    "file"
+                ],
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "description": "The .zap file to assemble"
+                    }
+                }
+            }
+        ],
+        "problemPatterns": [
+            {
+                "name": "zilf",
+                "regexp": "^\\[(error|warning|info) ([A-Z]+\\d+)\\] (?:(.+?):(\\d+)|<.*>): (.*)$",
+                "severity": 1,
+                "code": 2,
+                "file": 3,
+                "line": 4,
+                "message": 5
+            },
+            {
+                "name": "zilf-absolute",
+                "regexp": "^\\[(error|warning|info) ([A-Z]+\\d+)\\] (?:((?=[A-Za-z]:|/).+?):(\\d+)|<.*>): (.*)$",
+                "severity": 1,
+                "code": 2,
+                "file": 3,
+                "line": 4,
+                "message": 5
+            }
+        ],
+        "problemMatchers": [
+            {
+                "name": "zilf-absolute",
+                "label": "ZILF problem matcher (absolute paths)",
+                "source": "zilf",
+                "owner": "zil-language:absolute",
+                "applyTo": "allDocuments",
+                "fileLocation": "absolute",
+                "pattern": "$zilf-absolute"
+            },
+            {
+                "name": "zilf",
+                "label": "ZILF problem matcher (relative paths)",
+                "source": "zilf",
+                "owner": "zil-language",
+                "applyTo": "allDocuments",
+                "fileLocation": [
+                    "relative",
+                    "${cwd}"
+                ],
+                "pattern": "$zilf"
+            }
+        ]
+    }
+}
